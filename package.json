@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/aleksey-hoffman/sigma-file-manager/v2/src/modules/extensions/sdk/manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/aleksey-hoffman/sigma-file-manager/main/packages/api/manifest.schema.json",
   "id": "sigma.my-extension",
   "name": "My Extension",
   "version": "1.0.0",
@@ -33,4 +33,7 @@
   "engines": {
     "sigmaFileManager": ">=2.0.0"
   },
+  "devDependencies": {
+    "@sigma-file-manager/api": "^1.2.0"
+  }
 }
