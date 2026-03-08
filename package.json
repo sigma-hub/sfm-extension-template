@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/aleksey-hoffman/sigma-file-manager/v2/src/modules/extensions/sdk/manifest.schema.json",
+  "id": "sigma.my-extension",
+  "name": "My Extension",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "sigma-hub",
+    "url": "https://github.com/sigma-hub"
+  },
+  "repository": "https://github.com/sigma-hub/sfm-extension-template",
+  "license": "MIT",
+  "categories": [
+    "Example"
+  ],
+  "tags": [
+    "template"
+  ],
+  "extensionType": "api",
+  "main": "index.js",
+  "permissions": [
+    "commands",
+    "notifications"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "say-hello",
+        "title": "Say Hello",
+        "description": "Show a notification from the template extension"
+      }
+    ]
+  },
+  "engines": {
+    "sigmaFileManager": ">=2.0.0"
+  },
+}
