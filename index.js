@@ -8,7 +8,7 @@
  * @param {ExtensionActivationContext} context
  * @returns {Promise<void>}
  */
-async function activate(context) {
+export async function activate(context) {
   console.log('[Template] Extension activated at:', context.extensionPath);
 
   sigma.commands.registerCommand(
@@ -30,7 +30,5 @@ async function activate(context) {
 /**
  * @returns {Promise<void>}
  */
-async function deactivate() {
+export async function deactivate() {
 }
-
-module.exports = { activate, deactivate };

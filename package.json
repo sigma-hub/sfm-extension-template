@@ -2,13 +2,17 @@
   "$schema": "https://raw.githubusercontent.com/aleksey-hoffman/sigma-file-manager/main/packages/api/manifest.schema.json",
   "id": "sigma.my-extension",
   "name": "My Extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": {
     "name": "sigma-hub",
     "url": "https://github.com/sigma-hub"
   },
   "repository": "https://github.com/sigma-hub/sfm-extension-template",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "categories": [
     "Example"
   ],
@@ -20,6 +24,9 @@
   "permissions": [
     "commands",
     "notifications"
+  ],
+  "activationEvents": [
+    "onStartup"
   ],
   "contributes": {
     "commands": [
