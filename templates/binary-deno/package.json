@@ -1,0 +1,110 @@
+{
+  "$schema": "./node_modules/@sigma-file-manager/api/manifest.schema.json",
+  "id": "your-name.my-extension",
+  "name": "My Extension",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "your-name",
+    "url": "https://github.com/your-name"
+  },
+  "repository": "https://github.com/your-name/my-extension",
+  "license": "MIT",
+  "categories": [
+    "Example"
+  ],
+  "extensionType": "api",
+  "type": "module",
+  "main": "dist/index.js",
+  "permissions": [
+    "commands",
+    "shell"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "my-extension.deno-json-tools",
+        "title": "Run Deno JSON Tools",
+        "description": "Validate, format, or minify JSON with a bundled Deno script"
+      }
+    ]
+  },
+  "engines": {
+    "sigmaFileManager": ">=2.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@sigma-file-manager/api": "^1.5.0",
+    "typescript": "~5.8.0"
+  },
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "binaries": [
+    {
+      "id": "deno",
+      "name": "Deno",
+      "version": "2.7.11",
+      "repository": "https://github.com/denoland/deno",
+      "assets": [
+        {
+          "platform": "windows",
+          "arch": [
+            "x64"
+          ],
+          "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-pc-windows-msvc.zip",
+          "integrity": "sha256:8bd617ed5d999115eaa249edba493ab313afb32be94fcb2c71db1828a8376eb8",
+          "archive": true,
+          "executable": "deno.exe"
+        },
+        {
+          "platform": "macos",
+          "arch": [
+            "x64"
+          ],
+          "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-apple-darwin.zip",
+          "integrity": "sha256:a01abae36024b9a6cfa9ffa5fa8325d71993e115fb7a8ab79f2720fe83b7fb5b",
+          "archive": true,
+          "executable": "deno"
+        },
+        {
+          "platform": "macos",
+          "arch": [
+            "arm64"
+          ],
+          "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-aarch64-apple-darwin.zip",
+          "integrity": "sha256:2da6fd51ad6af3b8711ff327b448b76b1dc8ee75678842aff637b6827205d8bd",
+          "archive": true,
+          "executable": "deno"
+        },
+        {
+          "platform": "linux",
+          "arch": [
+            "x64"
+          ],
+          "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-unknown-linux-gnu.zip",
+          "integrity": "sha256:16990cd4f3728b82b0f1432b233214fe793a0e03c27d77a2ee89f27b3e984097",
+          "archive": true,
+          "executable": "deno"
+        },
+        {
+          "platform": "linux",
+          "arch": [
+            "arm64"
+          ],
+          "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-aarch64-unknown-linux-gnu.zip",
+          "integrity": "sha256:1c9024937e711d17c20bc0fd510147aba6d5315ed6cfbe0fa0e6d3cee8a681b7",
+          "archive": true,
+          "executable": "deno"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "notificationActionTitle": "Example Notification",
+  "notificationTitle": "Extension Notification",
+  "notificationSubtitle": "Action triggered from the context menu",
+  "selectedEntry": "Selected entry: {name}",
+  "noSelection": "No entries were selected.",
+  "countSelectedTitle": "Count Selected Items",
+  "selectionCountTitle": "Selection Count",
+  "selectionCountSubtitle": "Selected {count} items: {files} files, {folders} folders",
+  "copyPathTitle": "Copy Path",
+  "copyPathSuccessTitle": "Path Copied",
+  "copyPathSuccessSubtitle": "The selected path was copied to the clipboard."
+}

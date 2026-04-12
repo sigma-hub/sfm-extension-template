@@ -1,0 +1,13 @@
+{
+  "commandTitle": "Show PowerShell Runtime",
+  "commandDescription": "Collect Windows runtime details with PowerShell",
+  "unsupportedTitle": "PowerShell Unavailable",
+  "unsupportedSubtitle": "This template is intended for Windows only.",
+  "resultTitle": "PowerShell Runtime",
+  "hostNameLabel": "Host Name",
+  "powerShellVersionLabel": "PowerShell Version",
+  "processCountLabel": "Running Processes",
+  "topProcessesLabel": "Top CPU Processes",
+  "noProcessData": "No process data returned.",
+  "errorTitle": "PowerShell Runtime Error"
+}

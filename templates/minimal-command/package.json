@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/@sigma-file-manager/api/manifest.schema.json",
+  "id": "your-name.my-extension",
+  "name": "My Extension",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "your-name",
+    "url": "https://github.com/your-name"
+  },
+  "repository": "https://github.com/your-name/my-extension",
+  "license": "MIT",
+  "categories": [
+    "Example"
+  ],
+  "extensionType": "api",
+  "type": "module",
+  "main": "dist/index.js",
+  "permissions": [
+    "commands",
+    "notifications"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "my-extension.say-hello",
+        "title": "Say Hello",
+        "description": "Show a notification from the template extension"
+      }
+    ]
+  },
+  "engines": {
+    "sigmaFileManager": ">=2.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@sigma-file-manager/api": "^1.5.0",
+    "typescript": "~5.8.0"
+  }
+}

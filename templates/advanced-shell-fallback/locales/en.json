@@ -1,0 +1,12 @@
+{
+  "actionTitle": "Analyze File With Runtime Fallback",
+  "progressSubtitle": "Analyzing {fileName}",
+  "preparingProgress": "Preparing analysis...",
+  "runningCommand": "Running {command}...",
+  "workingWithRuntime": "Working with {command}...",
+  "cancelledTitle": "Analysis Cancelled",
+  "cancelledSubtitle": "Stopped analyzing {fileName}",
+  "resultTitle": "File analysis: {fileName}",
+  "hashLabel": "SHA-256 Hash",
+  "errorTitle": "Analysis Error"
+}

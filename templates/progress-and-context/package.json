@@ -1,0 +1,74 @@
+{
+  "$schema": "./node_modules/@sigma-file-manager/api/manifest.schema.json",
+  "id": "your-name.my-extension",
+  "name": "My Extension",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "your-name",
+    "url": "https://github.com/your-name"
+  },
+  "repository": "https://github.com/your-name/my-extension",
+  "license": "MIT",
+  "categories": [
+    "Example"
+  ],
+  "extensionType": "api",
+  "type": "module",
+  "main": "dist/index.js",
+  "permissions": [
+    "commands",
+    "notifications"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Progress And Context Settings",
+      "properties": {
+        "totalSteps": {
+          "type": "number",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 50,
+          "description": "How many steps the demo progress command should simulate"
+        },
+        "stepDelayMs": {
+          "type": "number",
+          "default": 250,
+          "minimum": 50,
+          "maximum": 2000,
+          "description": "Delay between progress updates in milliseconds"
+        }
+      }
+    },
+    "commands": [
+      {
+        "id": "my-extension.show-context",
+        "title": "Show Current Context",
+        "description": "Display the current path and selected entries"
+      },
+      {
+        "id": "my-extension.show-settings",
+        "title": "Show Current Settings",
+        "description": "Display the current extension settings"
+      },
+      {
+        "id": "my-extension.demo-progress",
+        "title": "Demo Progress API",
+        "description": "Run a cancellable progress workflow"
+      }
+    ]
+  },
+  "engines": {
+    "sigmaFileManager": ">=2.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@sigma-file-manager/api": "^1.5.0",
+    "typescript": "~5.8.0"
+  }
+}

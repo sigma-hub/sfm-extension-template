@@ -1,0 +1,16 @@
+{
+  "fileDetailsActionTitle": "Show File Details",
+  "fileDetailsTitle": "File details: {fileName}",
+  "nameLabel": "Name",
+  "pathLabel": "Path",
+  "extensionLabel": "Extension",
+  "sizeLabel": "Size",
+  "noneValue": "None",
+  "notAvailable": "N/A",
+  "openFileDialogTitle": "Open File Dialog",
+  "openFileDialogDescription": "Open a native file picker and display the result",
+  "selectFileTitle": "Select a file",
+  "dialogResultTitle": "Dialog Result",
+  "dialogResultLabel": "Selected Path",
+  "nothingSelected": "Nothing was selected."
+}

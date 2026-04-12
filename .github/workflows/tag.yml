@@ -1,0 +1,48 @@
+name: Tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  verify-templates:
+    runs-on: ubuntu-latest
+    env:
+      TEMPLATE_DIRS: >-
+        templates/minimal-command
+        templates/context-menu-notification
+        templates/modal-and-dialogs
+        templates/progress-and-context
+        templates/binary-deno
+        templates/powershell-runtime
+        templates/advanced-shell-fallback
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies and build templates
+        run: |
+          for dir in $TEMPLATE_DIRS; do
+            npm --prefix "$dir" ci --ignore-scripts
+            npm --prefix "$dir" run build
+          done
+
+      - name: Ensure template dist files are tracked and match source
+        run: |
+          for dir in $TEMPLATE_DIRS; do
+            if git check-ignore -q "$dir/dist/index.js" 2>/dev/null; then
+              echo "::error::$dir/dist is gitignored. Template dist files must be committed for Git tag installs."
+              exit 1
+            fi
+
+            if ! git ls-files --error-unmatch "$dir/dist/index.js" >/dev/null 2>&1; then
+              echo "::error::$dir/dist/index.js is not in git. Run the template build and commit dist before tagging."
+              exit 1
+            fi
+
+            git diff --exit-code "$dir/dist"
+          done

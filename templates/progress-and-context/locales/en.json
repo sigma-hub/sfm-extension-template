@@ -1,0 +1,19 @@
+{
+  "showContextTitle": "Show Current Context",
+  "showContextDescription": "Display the current path and selected entries",
+  "currentPathLabel": "Current Path",
+  "selectedCountLabel": "Selected Items",
+  "directoryLabel": "Directory",
+  "fileLabel": "File",
+  "notAvailable": "N/A",
+  "showSettingsTitle": "Show Current Settings",
+  "showSettingsDescription": "Display the current extension settings",
+  "settingsIntro": "Current configuration for this extension.",
+  "demoProgressTitle": "Demo Progress API",
+  "demoProgressDescription": "Run a cancellable progress workflow",
+  "progressSubtitle": "Processing",
+  "progressDescription": "Step {current} of {total}",
+  "progressFinishedTitle": "Progress Finished",
+  "progressCancelledTitle": "Progress Cancelled",
+  "progressFinishedSubtitle": "Completed {completed} of {total} steps."
+}

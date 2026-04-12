@@ -1,0 +1,6 @@
+{
+  "commandTitle": "Say Hello",
+  "commandDescription": "Show a notification from the template extension",
+  "notificationTitle": "Hello",
+  "notificationSubtitle": "Your Sigma File Manager extension is running."
+}

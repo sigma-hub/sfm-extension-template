@@ -1,0 +1,14 @@
+{
+  "commandTitle": "Run Deno JSON Tools",
+  "commandDescription": "Validate, format, or minify JSON with a bundled Deno script",
+  "actionLabel": "Action",
+  "validateAction": "Validate JSON",
+  "prettyAction": "Pretty Print",
+  "minifyAction": "Minify",
+  "jsonLabel": "JSON",
+  "resultLabel": "Result",
+  "runLabel": "Run",
+  "jsonInputRequired": "JSON input is required.",
+  "runtimeUnavailable": "Managed Deno binary is unavailable.",
+  "commandFailed": "The Deno command failed."
+}
