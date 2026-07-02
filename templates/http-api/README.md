@@ -12,9 +12,7 @@ Use this starter when your extension needs to call HTTP services from the Sigma 
 ## Requirements
 
 - Sigma File Manager with extension HTTP support
-- `@sigma-file-manager/api` `>=1.10.0` (bundled in `vendor/` until the package is published to npm)
-
-When `@sigma-file-manager/api@1.10.0` is available on npm, replace the vendored dependency in `package.json` with `"^1.10.0"` and remove the `vendor/` folder.
+- `@sigma-file-manager/api` `>=1.11.0` from npm
 
 ## Usage
 

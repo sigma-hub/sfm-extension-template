@@ -52,14 +52,14 @@
   },
   "engines": {
     "sigmaFileManager": ">=2.0.0",
-    "extensionApi": ">=1.10.0"
+    "extensionApi": ">=1.11.0"
   },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@sigma-file-manager/api": "file:./vendor/sigma-file-manager-api-1.10.0.tgz",
+    "@sigma-file-manager/api": "^1.11.0",
     "typescript": "~5.8.0"
   },
   "platforms": [
