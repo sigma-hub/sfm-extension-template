@@ -2,8 +2,12 @@ import type { ExtensionHttpResponse } from '@sigma-file-manager/api';
 
 const t = sigma.i18n.extensionT;
 
+function decodeUtf8Body(body: Uint8Array): string {
+  return new TextDecoder().decode(body);
+}
+
 export function decodeResponseBody(body: Uint8Array, maxLength = 8000): string {
-  const decodedText = new TextDecoder().decode(body);
+  const decodedText = decodeUtf8Body(body);
 
   if (decodedText.length <= maxLength) {
     return decodedText;
@@ -39,7 +43,7 @@ export async function requestJson<T>(options: {
     throw new Error(`Request failed with status ${response.status}`);
   }
 
-  return JSON.parse(decodeResponseBody(response.body)) as T;
+  return JSON.parse(decodeUtf8Body(response.body)) as T;
 }
 
 export function showHttpErrorNotification(error: unknown): void {

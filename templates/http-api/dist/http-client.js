@@ -1,6 +1,9 @@
 const t = sigma.i18n.extensionT;
+function decodeUtf8Body(body) {
+    return new TextDecoder().decode(body);
+}
 export function decodeResponseBody(body, maxLength = 8000) {
-    const decodedText = new TextDecoder().decode(body);
+    const decodedText = decodeUtf8Body(body);
     if (decodedText.length <= maxLength) {
         return decodedText;
     }
@@ -25,7 +28,7 @@ export async function requestJson(options) {
     if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
     }
-    return JSON.parse(decodeResponseBody(response.body));
+    return JSON.parse(decodeUtf8Body(response.body));
 }
 export function showHttpErrorNotification(error) {
     const errorMessage = error instanceof Error ? error.message : String(error);

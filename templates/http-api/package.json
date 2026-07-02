@@ -34,17 +34,17 @@
   "contributes": {
     "commands": [
       {
-        "id": "my-extension.demo-http-form",
+        "id": "demo-http-form",
         "title": "Demo HTTP form modal",
         "description": "Fetch JSON from httpbin.org and show the response in a form modal"
       },
       {
-        "id": "my-extension.demo-http-localhost",
+        "id": "demo-http-localhost",
         "title": "Demo HTTP localhost request",
         "description": "Send a GET request to localhost:8080 and show the response or error"
       },
       {
-        "id": "my-extension.demo-http-list-detail",
+        "id": "demo-http-list-detail",
         "title": "Demo HTTP list-detail modal",
         "description": "Fetch demo posts over HTTP and browse them in a list-detail modal"
       }

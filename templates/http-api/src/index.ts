@@ -9,7 +9,7 @@ export async function activate(_context: ExtensionActivationContext): Promise<vo
 
   sigma.commands.registerCommand(
     {
-      id: 'my-extension.demo-http-form',
+      id: 'demo-http-form',
       title: t('commandFormTitle'),
       description: t('commandFormDescription'),
     },
@@ -18,7 +18,7 @@ export async function activate(_context: ExtensionActivationContext): Promise<vo
 
   sigma.commands.registerCommand(
     {
-      id: 'my-extension.demo-http-localhost',
+      id: 'demo-http-localhost',
       title: t('commandLocalhostTitle'),
       description: t('commandLocalhostDescription'),
     },
@@ -27,7 +27,7 @@ export async function activate(_context: ExtensionActivationContext): Promise<vo
 
   sigma.commands.registerCommand(
     {
-      id: 'my-extension.demo-http-list-detail',
+      id: 'demo-http-list-detail',
       title: t('commandListDetailTitle'),
       description: t('commandListDetailDescription'),
     },
