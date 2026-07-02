@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@sigma-file-manager/api/manifest.schema.json",
+  "id": "your-name.http-api-extension",
+  "name": "HTTP API Extension",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "your-name",
+    "url": "https://github.com/your-name"
+  },
+  "repository": "https://github.com/your-name/my-http-api-extension",
+  "license": "MIT",
+  "categories": [
+    "Example"
+  ],
+  "extensionType": "api",
+  "type": "module",
+  "main": "dist/index.js",
+  "permissions": [
+    "commands",
+    "notifications",
+    {
+      "name": "http",
+      "hosts": [
+        "https://httpbin.org",
+        "https://jsonplaceholder.typicode.com",
+        "http://localhost:*",
+        "http://127.0.0.1:*"
+      ]
+    }
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "my-extension.demo-http-form",
+        "title": "Demo HTTP form modal",
+        "description": "Fetch JSON from httpbin.org and show the response in a form modal"
+      },
+      {
+        "id": "my-extension.demo-http-localhost",
+        "title": "Demo HTTP localhost request",
+        "description": "Send a GET request to localhost:8080 and show the response or error"
+      },
+      {
+        "id": "my-extension.demo-http-list-detail",
+        "title": "Demo HTTP list-detail modal",
+        "description": "Fetch demo posts over HTTP and browse them in a list-detail modal"
+      }
+    ]
+  },
+  "engines": {
+    "sigmaFileManager": ">=2.0.0",
+    "extensionApi": ">=1.10.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@sigma-file-manager/api": "file:./vendor/sigma-file-manager-api-1.10.0.tgz",
+    "typescript": "~5.8.0"
+  },
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ]
+}

@@ -17,6 +17,7 @@ jobs:
         templates/binary-deno
         templates/powershell-runtime
         templates/advanced-shell-fallback
+        templates/http-api
     steps:
       - uses: actions/checkout@v4
 
